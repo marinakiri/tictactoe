@@ -31,8 +31,12 @@ class Board
 		@table.map { |row| row.map(&:value_to_s).join(' ') }
 	end
 
-	def play
-		    #TO DO : une méthode qui change la BoardCase jouée en fonction de la valeur du joueur (X, ou O)
+	def play(player, symbol)
+		puts "#{player} : Which case would you like to play ? "
+		choice = gets.chomp
+		select @caseXY
+		if @caseXY.value == '' @caseXY.value = @symbol
+		else puts "Case already played. Please choose another case :"
 
 	end
 

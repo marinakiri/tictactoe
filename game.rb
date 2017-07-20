@@ -5,13 +5,13 @@ require_relative 'player'
 class Game
 
 	def initialize
-		@board = Board.new
 	    @playerX = Player.new('PlayerX','X')
 	    @playerO = Player.new('PlayerO','O')
+	    @board = Board.new
 	end
 
 	def start
-		
+		@next_player = playerX
 	end
 
 	def turn
