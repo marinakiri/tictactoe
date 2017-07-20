@@ -1,4 +1,7 @@
 class Game
+	# require_relative 'board'
+	# require_relative 'boardcase'
+	# require_relative 'player'
 
 	def initialize
 		Player.new('player1','X')
@@ -17,5 +20,3 @@ class Game
 	end
 
 end
-
-Game.new.go

@@ -1,18 +1,24 @@
 class BoardCase
-	attr_accessor :state, :number
+	require_relative 'board'
+	# require_relative 'player'
+	# require_relative 'game'
 
-	def initialize(number)
-		@number = number
-		@state = ''
+
+	attr_accessor :position, :state
+
+	def initialize(position)
+		@position = position
+		@state = 'X'
 	end
 
-	def to_s
-	    #TO DO : doit renvoyer la valeur au format string
-		if @state = 'X' return ...
-		elsif @state = 'O' return ...
-		else return ...
+	def case_to_s
+		if @state == 'X'
+			print '[ X ]'
+		elsif @state == 'O'
+			print '[ O ]'
+		else print '[   ]'
 		end
 	end
 
-
 end
+

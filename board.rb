@@ -1,27 +1,45 @@
 class Board
+	require_relative 'boardcase'
+	# require_relative 'player'
+	# require_relative 'game'
+
 	include Enumerable
+
 	attr_accessor :array
 
 	def initialize
-		@array = Array.new
 
-		@array << BoardCase.new('A1')
-		@array << BoardCase.new('A2')
-		@array << BoardCase.new('A3')
-		@array << BoardCase.new('B1')
-		@array << BoardCase.new('B2')
-		@array << BoardCase.new('B3')
-		@array << BoardCase.new('C1')
-		@array << BoardCase.new('C2')
-		@array << BoardCase.new('C3')
+		# example_array = [
+		#   ["X", "O", "X"],
+		#   ["O", "O", " "],
+		#   ["X", "O", "1"]
+		# ]
 
+		@caseA1 = BoardCase.new('A1')
+		@caseA2 = BoardCase.new('A2')
+		@caseA3 = BoardCase.new('A3')
+		@caseB1 = BoardCase.new('B1')
+		@caseB2 = BoardCase.new('B2')
+		@caseB3 = BoardCase.new('B3')
+		@caseC1 = BoardCase.new('C1')
+		@caseC2 = BoardCase.new('C2')
+		@caseC3 = BoardCase.new('C3')
+
+		@array = []
+		@row1 = []
+		@row2 = []
+		@row3 = []
+
+		@row1 << @caseA1 << @caseB1 << @caseC1
+		@row2 << @caseA2 << @caseB2 << @caseC2
+		@row3 << @caseA3 << @caseB3 << @caseC3
+		@array << @row1 << @row2 << @row3
 
 	end
 
 	def to_s
-		  #TO DO : afficher le plateau
-
-		
+		#TO DO : afficher le plateau
+		@array.map! { |row| row.map(&:case_to_s).join(" ") }.join("\n")
 	end
 
 	def play
@@ -43,3 +61,6 @@ class Board
 	end
 
 end
+
+Board.new
+to_s
