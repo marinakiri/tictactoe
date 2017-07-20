@@ -1,20 +1,14 @@
-# require_relative 'board'
-# require_relative 'player'
-# require_relative 'game'
-
 class BoardCase
-
-	attr_accessor :position, :state
+	attr_accessor :position, :value
 
 	def initialize(position)
 		@position = position
-		@state = ''
+		@value = ''
 	end
 
-	def case_to_s
-		if @state == 'X' '[ X ]'
-		elsif @state == 'O' '[ O ]'
-		else '[   ]'
+	def value_to_s
+		if @value == '' "[#{@position}]"
+		else "[ #{@value} ]"
 		end
 	end
 

@@ -5,14 +5,13 @@ require_relative 'player'
 class Game
 
 	def initialize
-		Player.new('player1','X')
-		Player.new('player2','O')
-		# Board.new
+		@board = Board.new
+	    @playerX = Player.new('PlayerX','X')
+	    @playerO = Player.new('PlayerO','O')
 	end
 
-	def go
-		    # TO DO : lance la partie
-
+	def start
+		
 	end
 
 	def turn

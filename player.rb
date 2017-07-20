@@ -3,15 +3,12 @@ require_relative 'boardcase'
 require_relative 'game'
 
 class Player
-
-	attr_accessor :name, :value
+	attr_accessor :name, :symbol
 	attr_writer :score
 
-	def initialize(name, value)
-		    #TO DO : doit régler son nom, sa valeur, son état de victoire
-
+	def initialize(name, symbol)
 		@name = name
-		@value = value
+		@symbol = symbol
 		@score = nil
 	end
 
