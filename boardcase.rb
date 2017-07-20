@@ -1,14 +1,14 @@
-class BoardCase
-	require_relative 'board'
-	# require_relative 'player'
-	# require_relative 'game'
+# require_relative 'board'
+# require_relative 'player'
+# require_relative 'game'
 
+class BoardCase
 
 	attr_accessor :position, :state
 
 	def initialize(position)
 		@position = position
-		@state = 'X'
+		@state = ''
 	end
 
 	def case_to_s

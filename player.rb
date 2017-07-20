@@ -1,7 +1,8 @@
+require_relative 'board'
+require_relative 'boardcase'
+require_relative 'game'
+
 class Player
-	# require_relative 'board'
-	# require_relative 'boardcase'
-	# require_relative 'game'
 
 	attr_accessor :name, :value
 	attr_writer :score

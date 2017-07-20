@@ -1,12 +1,13 @@
+require_relative 'board'
+require_relative 'boardcase'
+require_relative 'player'
+
 class Game
-	# require_relative 'board'
-	# require_relative 'boardcase'
-	# require_relative 'player'
 
 	def initialize
 		Player.new('player1','X')
 		Player.new('player2','O')
-		Board.new
+		# Board.new
 	end
 
 	def go

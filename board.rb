@@ -1,9 +1,10 @@
-class Board
-	require_relative 'boardcase'
-	# require_relative 'player'
-	# require_relative 'game'
+require_relative 'boardcase'
+# require_relative 'player'
+# require_relative 'game'
 
-	include Enumerable
+class Board
+
+	# include Enumerable
 
 	attr_accessor :array
 
@@ -62,5 +63,5 @@ class Board
 
 end
 
-Board.new
-to_s
+b = Board.new
+puts b.to_s
