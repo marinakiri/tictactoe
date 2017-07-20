@@ -1,8 +1,8 @@
 class Game
 
 	def initialize
-		Player.new('player1')
-		Player.new('player2')
+		Player.new('player1','X')
+		Player.new('player2','O')
 		Board.new
 	end
 

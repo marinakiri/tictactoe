@@ -2,11 +2,11 @@ class Player
 	attr_accessor :name, :value
 	attr_writer :score
 
-	def initialize(name)
+	def initialize(name, pawn)
 		    #TO DO : doit régler son nom, sa valeur, son état de victoire
 
 		@name = name
-		@value = X or O
+		@pawn = pawn
 		@score = nil
 	end
 
