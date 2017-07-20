@@ -12,11 +12,9 @@ class BoardCase
 	end
 
 	def case_to_s
-		if @state == 'X'
-			print '[ X ]'
-		elsif @state == 'O'
-			print '[ O ]'
-		else print '[   ]'
+		if @state == 'X' '[ X ]'
+		elsif @state == 'O' '[ O ]'
+		else '[   ]'
 		end
 	end
 

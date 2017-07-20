@@ -40,7 +40,7 @@ class Board
 
 	def to_s
 		#TO DO : afficher le plateau
-		@array.map! { |row| row.map(&:case_to_s).join(" ") }.join("\n")
+		@array.map { |row| row.map(&:case_to_s).join(' ') }
 	end
 
 	def play
