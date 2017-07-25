@@ -53,7 +53,8 @@ class Board
 # 		@value # la case jouée prend pour valeur le symbole du player en cours
 	end
 
-# 	def victory
+ 	def victory
+ 		return false
 # 		#TO DO : qui gagne ?
 # 		# méthode Claire : faire des sum_table, si somme = 3, joueurX gagne
 # 		# méthode Marina : faire des arrays playerX_moves et playerO_moves, 
@@ -66,7 +67,7 @@ class Board
 # 		# A3 B3 C3
 # 		# A1 B2 C3
 # 		# A3 B2 C1
-# 	end
+ 	end
 
 end
 

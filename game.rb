@@ -4,7 +4,7 @@ require_relative 'player'
 require 'pry'
 
 class Game
-	attr_accessor :players, :board
+	attr_accessor :players, :board, :current_player
 
 	def initialize
 		puts "Player 1, type your name, you will have a X"
@@ -14,24 +14,38 @@ class Game
 		playerO_name = gets.chomp.to_s
 
     @players =[]
-    playerX = Player.new('PlayerX','X')
-    playerO = Player.new('PlayerO','O')
+    playerX = Player.new(playerX_name,'X')
+    playerO = Player.new(playerO_name,'O')
     @players << playerX
     @players << playerO
+    @current_player = @players[0]
     @board = Board.new
 
 	end
 
 	def go
-		@next_player = playerX
+		
+		10.times do |i|
+		
+			puts "turn number #{i+1}"
+
+			turn
+			
+			break if @board.victory == true
+
+			@current_player = players[(i+1)%2]
+			
+		end
+
+		#@next_player = playerX
 	end
 
-	def turn
+	def turn()
 # TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, 
 # passe au joueur suivant si la partie n'est pas finie
 
 #Afficher le plateau
-
+		puts "C'est au tour de #{@current_player.name} de jouer !"
 		@board.to_s
 		
 		# puts "#{player} : Which case would you like to play ? "
@@ -49,9 +63,6 @@ class Game
 
 		# puts chosen_case.value
 
-	end
-
-	def is_over
 	end
 
 end
