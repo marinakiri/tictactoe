@@ -31,19 +31,19 @@ class Board
 		@table.map { |row| row.map(&:value_to_s).join(' ') }
 	end
 
-	def play(player, symbol)
-		puts "#{player} : Which case would you like to play ? "
-		choice = gets.chomp
-		select @caseXY
-		if @caseXY.value == '' @caseXY.value = @symbol
-		else puts "Case already played. Please choose another case :"
-
+	def play
+#TO DO : une méthode qui change la BoardCase jouée en fonction de la valeur du joueur (X, ou O)
+		@symbol # le symbole du player en cours
+		@move # la case jouée correspond à l'input du player dans game.rb
+		@position # move doit correspondre à une position
+		@value # la case jouée prend pour valeur le symbole du player en cours
 	end
 
 	def victory
 		#TO DO : qui gagne ?
-		# faire des sum_table, si somme = 3, joueurX gagne
-
+		# méthode Claire : faire des sum_table, si somme = 3, joueurX gagne
+		# méthode Marina : faire des arrays playerX_moves et playerO_moves, 
+		# voir si les arrays contiennent une combinaison gagnante :
 		# A1 A2 A3
 		# B1 B2 B3
 		# C1 C2 C3

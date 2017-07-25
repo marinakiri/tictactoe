@@ -15,7 +15,17 @@ class Game
 	end
 
 	def turn
-		    #TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie
+# TO DO : affiche le plateau, demande au joueur il joue quoi, vérifie si un joueur a gagné, 
+# passe au joueur suivant si la partie n'est pas finie
+		
+		puts "#{player} : Which case would you like to play ? "
+		choice = gets.chomp.to_s.upcase!
+
+		while @caseXY.value <> '' puts "Case already played. Please choose another case :"
+		choice = gets.chomp
+		select @caseXY
+		else @caseXY.value = symbol
+		end
 
 	end
 
