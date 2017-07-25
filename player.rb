@@ -1,6 +1,7 @@
 require_relative 'board'
 require_relative 'boardcase'
-require_relative 'game'
+#require_relative 'game'
+require 'pry'
 
 class Player
 	attr_accessor :name, :symbol
@@ -13,3 +14,5 @@ class Player
 	end
 
 end
+
+#binding.pry

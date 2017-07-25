@@ -1,3 +1,5 @@
+require 'pry'
+
 class BoardCase
 	attr_accessor :position, :value
 
@@ -7,10 +9,14 @@ class BoardCase
 	end
 
 	def value_to_s
-		if @value == '' "[#{@position}]"
-		else "[ #{@value} ]"
+		if @value == '' 
+			return "[#{@position}]"
+		else 
+			return "[ #{@value} ]"
 		end
 	end
 
 end
 
+
+#binding.pry
