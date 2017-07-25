@@ -19,13 +19,19 @@ class Game
 # passe au joueur suivant si la partie n'est pas finie
 		
 		puts "#{player} : Which case would you like to play ? "
-		choice = gets.chomp.to_s.upcase!
+		
+		chosen_case_position = gets.chomp.to_s.upcase!
+		chosen_case = Boardcase.new(chosen_case_position)
 
-		while @caseXY.value <> '' puts "Case already played. Please choose another case :"
-		choice = gets.chomp
-		select @caseXY
-		else @caseXY.value = symbol
-		end
+		# if chosen_case.value != '' do 
+		# 	puts "Case already played. Please choose another case :"
+		# 	chosen_case_position = gets.chomp
+		# 	chosen_case = Boardcase.new(chosen_case_position)
+		# else 
+		# 	chosen_case.value = 'X' #faire varier en fonction du player playerX ou autre
+		# end
+
+		puts chosen_case.value
 
 	end
 
